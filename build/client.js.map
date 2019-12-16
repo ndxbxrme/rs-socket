@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "client.js",
+  "sourceRoot": "../src/",
+  "sources": [
+    "client.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,MAAA,OAAA,EAAA,EAAA,EAAA;;EAAA,EAAA,GAAK,OAAA,CAAQ,kBAAR;;EACL,OAAA,GAAU,MAAM,CAAC,OAAP,IAAkB,OAAA,CAAQ,SAAR;;EAC5B,UAAA,GAAa;;EACb,OAAO,CAAC,MAAR,CAAe,UAAf,EAA2B,EAA3B,CACA,CAAC,OADD,CACS,QADT,EACmB,QAAA,CAAA,CAAA;AACjB,QAAA;IAAA,MAAA,GAAS,EAAA,CACP;MAAA,KAAA,EACE;QAAA,MAAA,EAAQ,QAAQ,CAAC,IAAI,CAAC,UAAW,CAAA,QAAA,CAAS,CAAC;MAA3C;IADF,CADO;WAGT;EAJiB,CADnB;;EAMA,MAAM,CAAC,OAAP,GAAiB;AATjB",
+  "sourcesContent": [
+    "io = require 'socket.io-client'\r\nangular = window.angular or require 'angular'\r\nmoduleName = 'rs-socket'\r\nangular.module moduleName, []\r\n.factory 'socket', ->\r\n  socket = io\r\n    query:\r\n      server: document.body.attributes['server'].value\r\n  socket\r\nmodule.exports = moduleName"
+  ]
+}
